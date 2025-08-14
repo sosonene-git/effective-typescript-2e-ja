@@ -6,3 +6,4 @@
 *.tsbuildinfo
 .env
 .vscode/
+.github/
