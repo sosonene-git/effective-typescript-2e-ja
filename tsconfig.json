@@ -1,40 +1,43 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
+  // このファイルの詳細については、https://aka.ms/tsconfig を参照してください
   "compilerOptions": {
-    // File Layout
+    // ファイル構成: "rootDir" と "outDir" を設定して、ソースと出力ディレクトリを指定します。
     // "rootDir": "./src",
     // "outDir": "./dist",
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
+    // 環境設定: モジュールシステムとターゲットのJavaScriptバージョンを設定します。
+    // "module": "nodenext" はNode.jsスタイルのモジュール解決を指定します。
+    // "target": "esnext" は最新のJavaScript機能を有効にします。
     "module": "nodenext",
     "target": "esnext",
+    // 型定義: 含める型定義を指定します。現在は空です。
     "types": [],
-    // For nodejs:
+    // Node.js用: 以下の行をコメント解除して、Node.jsの型とライブラリを含めます。
     // "lib": ["esnext"],
     // "types": ["node"],
-    // and npm install -D @types/node
-    // Other Outputs
+    // Node.jsの型をインストールするには: npm install -D @types/node
+    // その他の出力: デバッグや型チェックのためにソースマップと宣言ファイルを有効にします。
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "strictNullChecks": true,
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    // 厳格な型チェックオプション: より安全なコードのために厳格なルールを適用します。
+    "noUncheckedIndexedAccess": true, // 配列やオブジェクトのインデックスへの未チェックアクセスを防ぎます。
+    "exactOptionalPropertyTypes": true, // オプショナルプロパティを厳密に扱います。
+    "strictNullChecks": true, // 明示的に許可されない限り、nullやundefinedを禁止します。
+    // コーディングスタイルオプション: コメント解除して厳格なコーディングスタイルを適用します。
+    // "noImplicitReturns": true, // 関数が明示的に値を返さない場合に警告します。
+    // "noImplicitOverride": true, // オーバーライドされたメソッドに "override" キーワードを要求します。
+    // "noUnusedLocals": true, // 未使用のローカル変数を報告します。
+    // "noUnusedParameters": true, // 未使用の関数パラメータを報告します。
+    // "noFallthroughCasesInSwitch": true, // switch文でのフォールスルーを防ぎます。
+    // "noPropertyAccessFromIndexSignature": true, // インデックスシグネチャを介したプロパティアクセスを禁止します。
+    // 推奨オプション: 厳格な型チェックとReact JSXのサポートを有効にします。
+    "strict": true, // すべての厳格な型チェックオプションを有効にします。
+    "jsx": "react-jsx", // React用のJSXを設定します。
+    // その他のオプション: モジュール構文や副作用に関する設定。
+    "verbatimModuleSyntax": true, // 記述されたモジュール構文をそのまま保持します。
+    "isolatedModules": true, // 各ファイルを個別のモジュールとして扱います。
+    "noUncheckedSideEffectImports": true, // 未チェックの副作用を持つインポートを禁止します。
+    "moduleDetection": "force", // モジュール検出を強制します。
+    "skipLibCheck": true, // 宣言ファイルの型チェックをスキップしてビルドを高速化します。
   }
 }
